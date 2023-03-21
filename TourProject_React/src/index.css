@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500&family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Poppins";
+}
+.title{
+    border: 5px solid rgb(135, 153, 153);
+    border-radius: 10px;
+    font-size: 3rem;
+    margin: 6vh;
+    padding: 1vh 5vw;
+    font-family: cursive;
+}
+.title:hover{
+    background: linear-gradient( white,green);
+    transition: all 1s ease-in-out;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 50px;
+}
+.cards{
+    display: flex;
+    /* align-items: center; */
+    
+    /* iski wajah se right wale cards bhi uper niche ho rhe hai  */
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    margin: auto;
+    /* flex-direction: column; */
+}
+.card{
+    width:400px ;
+    height: max-content;
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    align-items: center;
+    box-shadow: rgba(0,0,0,0.24) 0px 3px 8px;
+    box-shadow: inset black 3px 3px 3px;
+}
+.image{
+    width: 380px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+.tour-info{
+    margin: 20px 5px ;
+    padding: 3px 3px;
+    /* border: 3px solid black;
+    box-shadow: inset 3px 3px 10px black; */
+}
+.tour-details{
+margin: 0px 2px;
+}
+.tour-price{
+    color: rgb(0, 178, 0);
+    font-size: 1.3rem;
+}
+.tour-name{
+    font-size: 1.5rem;
+}
+.description{
+    justify-content: center;
+}
+.read-more{
+    color:#12b0e8;
+    font-weight: 500;
+}
+.read-more:hover{
+    cursor: pointer;
+    color:#000000;
+}
+.btn-red{
+    margin: 15px;
+    margin-top: auto;
+    padding: 10px 80px;
+    background-color: aliceblue;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    font-size: 1.03rem;
+    font-weight: bold;
+}
+.btn-red:hover{
+    /* background: linear-gradient( to bottom right,rgb(238, 234, 234),rgb(176, 152, 152),rgb(229, 220, 220)); */
+    
+    color: rgb(255, 255, 255);
+    background: linear-gradient(white,red);
+    transition: all 1s ease-in-out;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px #000000; 
+
+}
+
+
+
+.refresh{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins";
+}
+.btn-white{
+    padding: 5px 30px;
+    margin: 10px 10px;
+    font-size: 1.03rem;
+    font-weight: bold;
+    border: 2px solid green;
+    border-radius: 5px ;
+    
+
+}
+.btn-white:hover{
+    background: linear-gradient( white,green);
+    transition: all 0.5s ease-in-out;
+    text-shadow: 2px 2px 4px #000000;
+    color: white;
+    font-size: 20px;
+}
+
+.no-tours-left{
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 80px;
+}
+
+/* More CSS  for glowing card*/
+
+
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+}
+
+.card {
+    background: white;
+    position: relative;
+    cursor: pointer;
+    font-family: cursive;
+}
+
+.card:hover {
+    color: rgb(45, 154, 201);
+    transition: color 1s;
+}
+.card:hover .read-more,.tour-name{
+    color: rgb(0, 0, 0);
+    transition: color 1s;
+}
+.card:hover:before, .card:hover:after {
+    animation: none;
+    opacity: 0;
+}
+
+
+.card::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+    var(--rotate), #5ddcff, #3c67e3 43%, #4e00c2);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+
+
+/* .card::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+} */
+
+@keyframes spin {
+    0% {
+    --rotate: 0deg;
+    }
+    100% {
+    --rotate: 360deg;
+    }
+}
