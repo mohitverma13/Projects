@@ -1,0 +1,111 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+#wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 10px;
+}
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+.background {
+  transform: translateZ(-40px) scale(6);
+}
+.foreground {
+  transform: translateZ(-20px) scale(3);
+}
+.background,
+.foreground {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+h1 {
+  position: absolute;
+  font-size: 7rem;
+  color: white;
+  text-shadow: 3px 3px 20px black;
+  transform: translateX(-50%);
+  top: 5rem;
+  left: 50%;
+}
+section {
+  background-color: rgb(45, 45, 45);
+  color: white;
+  padding: 5rem 0;
+}
+.secheading {
+  font-size: 5rem;
+  padding: 0 10rem;
+  color: aliceblue;
+  font-family: 'Noto Serif Toto', serif;
+}
+.text {
+  font-size: 1.5rem;
+  padding: 0 10rem;
+}
+.bg1 {
+  background-image: url(./sport-1.jpg);
+}
+.bg2 {
+  background-image: url(./sport-2.jpg);
+}
+.bg3 {
+  background-image: url(./sport-3.jpg);
+}
+.bg {
+  position: relative;
+  width: 100%;
+  background-attachment: fixed;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+}
+.desc{
+    position: absolute;
+    background-color:white;
+    top: 50%;
+    left: 50%;
+    padding: 0.5rem 0.2rem;
+    text-shadow: 3px 3px 10px rgb(163, 154, 154);
+    border: 2px solid black;
+    border-radius: 5px;
+    /* -webkit-text-stroke: 1px black; */
+    color: black;
+    transform: translateX(-140px);
+
+}
+.desc1{
+    position: absolute;
+    background-color:white;
+    top: 50%;
+    left: 50%;
+    padding: 0.5rem 0.2rem;
+    text-shadow: 3px 3px 10px rgb(163, 154, 154);
+    border: 2px solid black;
+    border-radius: 5px;
+    color: black;
+    transform: translateX(100px);
+}
+.copyright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 75px;
+    color: rgb(162, 154, 154);
+}
+
